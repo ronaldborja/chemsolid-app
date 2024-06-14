@@ -1,5 +1,5 @@
 <h3> ChemSolid.</h3> 
-<h5>This is a desktop application programmed in Python using the QtDesing library for the sizing of screens, mills, screws, bucket elevators and conveyor belts.</h5>
+<h5>This is a desktop application programmed in Python using the QtDesinger library for the sizing of screens, mills, screws, bucket elevators and conveyor belts.</h5>
 
 <h6>Home Page</h6>
 
