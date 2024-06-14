@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="imagenesplash">
+    <file>images/images/icono-removebg-preview.png</file>
+    <file>images/images/splash-removebg-preview.png</file>
+  </qresource>
+</RCC>
