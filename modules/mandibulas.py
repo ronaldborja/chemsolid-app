@@ -19,7 +19,7 @@ class Mandibula(QMainWindow):
 
     def calcular_mandibula(self): 
         widgets = self.ui 
-
+        
         # Recuperamos los valores ingresados por el usuario: 
         tamañoParticulaMayor = widgets.lineEditSizeMayor.text()
         tamañoParticulaMenor = widgets.lineEditSizeMenor.text()
@@ -401,7 +401,167 @@ class Mandibula(QMainWindow):
         for i in lineEdit:
             i.clear()
 
-    
+    def inhabilitar_mandibulas(self): 
+        widgets = self.ui 
+        combox = self.sender()
+        comboName = combox.objectName()
+
+        if comboName == 'comboBox': 
+            if widgets.comboBox.currentText() == 'General': 
+                widgets.lineEditSizeMayor.setEnabled(True)
+                widgets.lineEditSizeMenor.setEnabled(True)
+                widgets.lineEditDensidad.setEnabled(True)
+                widgets.lineEditLmin.setEnabled(True)
+                widgets.lineEditFrecuenciaMolienda.setEnabled(True)
+                widgets.lineEditSet.setEnabled(True)
+                widgets.lineEditGape.setEnabled(True)
+                widgets.lineEditAlturaTriturador.setEnabled(True)
+                widgets.lineEditWidth.setEnabled(True)
+                widgets.lineEditThrow.setEnabled(True)
+                widgets.lineEditCapacidadTrituradora.setEnabled(True)
+                widgets.lineEditFrecuenciaCritica.setEnabled(True)
+                widgets.lineEditCapacidadReal.setEnabled(True)
+                widgets.lineEditRelacionReduccion.setEnabled(True)
+                widgets.lineEditOtroIndiceTrituradora.setEnabled(True)
+                widgets.lineEditPotenciaTrituradora.setEnabled(True)
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"
+
+                widgets.lineEditSizeMayor.setStyleSheet(default_style)
+                widgets.lineEditSizeMenor.setStyleSheet(default_style)
+                widgets.lineEditDensidad.setStyleSheet(default_style)
+                widgets.lineEditLmin.setStyleSheet(default_style)
+                widgets.lineEditFrecuenciaMolienda.setStyleSheet(default_style)
+                widgets.lineEditSet.setStyleSheet(default_style)
+                widgets.lineEditGape.setStyleSheet(default_style)
+                widgets.lineEditAlturaTriturador.setStyleSheet(default_style)
+                widgets.lineEditWidth.setStyleSheet(default_style)
+                widgets.lineEditThrow.setStyleSheet(default_style)
+                widgets.lineEditCapacidadTrituradora.setStyleSheet(default_style)
+                widgets.lineEditFrecuenciaCritica.setStyleSheet(default_style)
+                widgets.lineEditCapacidadReal.setStyleSheet(default_style)
+                widgets.lineEditRelacionReduccion.setStyleSheet(default_style)
+                widgets.lineEditOtroIndiceTrituradora.setStyleSheet(default_style)
+                widgets.lineEditPotenciaTrituradora.setStyleSheet(default_style)    
+                self.limpiarMandibula() 
+
+            elif widgets.comboBox.currentText() == 'Mill Geometrical Parameters': 
+                widgets.lineEditSizeMayor.setEnabled(True) #y
+                widgets.lineEditSizeMenor.setEnabled(False) 
+                widgets.lineEditDensidad.setEnabled(False) 
+                widgets.lineEditLmin.setEnabled(True) #y
+                widgets.lineEditFrecuenciaMolienda.setEnabled(False)
+                widgets.lineEditSet.setEnabled(True) #y
+                widgets.lineEditGape.setEnabled(True) #y
+                widgets.lineEditAlturaTriturador.setEnabled(True) #y
+                widgets.lineEditWidth.setEnabled(True) #y
+                widgets.lineEditThrow.setEnabled(True) #y
+                widgets.lineEditCapacidadTrituradora.setEnabled(False)
+                widgets.lineEditFrecuenciaCritica.setEnabled(False)
+                widgets.lineEditCapacidadReal.setEnabled(False)
+                widgets.lineEditRelacionReduccion.setEnabled(True) #y
+                widgets.lineEditOtroIndiceTrituradora.setEnabled(False)
+                widgets.lineEditPotenciaTrituradora.setEnabled(False)
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"
+
+                widgets.lineEditSizeMayor.setStyleSheet(default_style) #y
+                widgets.lineEditSizeMenor.setStyleSheet(light_gray_style) 
+                widgets.lineEditDensidad.setStyleSheet(light_gray_style) 
+                widgets.lineEditLmin.setStyleSheet(default_style) #y
+                widgets.lineEditFrecuenciaMolienda.setStyleSheet(light_gray_style)
+                widgets.lineEditSet.setStyleSheet(default_style) #y
+                widgets.lineEditGape.setStyleSheet(default_style) #y
+                widgets.lineEditAlturaTriturador.setStyleSheet(default_style) #y
+                widgets.lineEditWidth.setStyleSheet(default_style) #y
+                widgets.lineEditThrow.setStyleSheet(default_style) #y
+                widgets.lineEditCapacidadTrituradora.setStyleSheet(light_gray_style)
+                widgets.lineEditFrecuenciaCritica.setStyleSheet(light_gray_style)
+                widgets.lineEditCapacidadReal.setStyleSheet(light_gray_style)
+                widgets.lineEditRelacionReduccion.setStyleSheet(default_style) #y
+                widgets.lineEditOtroIndiceTrituradora.setStyleSheet(light_gray_style)
+                widgets.lineEditPotenciaTrituradora.setStyleSheet(light_gray_style)
+                self.limpiarMandibula()
+
+            elif widgets.comboBox.currentText() == 'Mill Capacity': 
+                widgets.lineEditSizeMayor.setEnabled(True) 
+                widgets.lineEditSizeMenor.setEnabled(True) 
+                widgets.lineEditDensidad.setEnabled(True) 
+                widgets.lineEditLmin.setEnabled(True) 
+                widgets.lineEditFrecuenciaMolienda.setEnabled(True)
+                widgets.lineEditSet.setEnabled(True) 
+                widgets.lineEditGape.setEnabled(True) 
+                widgets.lineEditAlturaTriturador.setEnabled(True) 
+                widgets.lineEditWidth.setEnabled(True) 
+                widgets.lineEditThrow.setEnabled(True) 
+                widgets.lineEditCapacidadTrituradora.setEnabled(True)
+                widgets.lineEditFrecuenciaCritica.setEnabled(True)
+                widgets.lineEditCapacidadReal.setEnabled(True)
+                widgets.lineEditRelacionReduccion.setEnabled(True) 
+                widgets.lineEditOtroIndiceTrituradora.setEnabled(False) #nel
+                widgets.lineEditPotenciaTrituradora.setEnabled(False)   #nel
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"
+
+                widgets.lineEditSizeMayor.setStyleSheet(default_style) 
+                widgets.lineEditSizeMenor.setStyleSheet(default_style) 
+                widgets.lineEditDensidad.setStyleSheet(default_style) 
+                widgets.lineEditLmin.setStyleSheet(default_style) 
+                widgets.lineEditFrecuenciaMolienda.setStyleSheet(default_style) 
+                widgets.lineEditSet.setStyleSheet(default_style) 
+                widgets.lineEditGape.setStyleSheet(default_style)  
+                widgets.lineEditAlturaTriturador.setStyleSheet(default_style) 
+                widgets.lineEditWidth.setStyleSheet(default_style)  
+                widgets.lineEditThrow.setStyleSheet(default_style) 
+                widgets.lineEditCapacidadTrituradora.setStyleSheet(default_style) 
+                widgets.lineEditFrecuenciaCritica.setStyleSheet(default_style) 
+                widgets.lineEditCapacidadReal.setStyleSheet(default_style) 
+                widgets.lineEditRelacionReduccion.setStyleSheet(default_style)  
+                widgets.lineEditOtroIndiceTrituradora.setStyleSheet(light_gray_style)  #nel
+                widgets.lineEditPotenciaTrituradora.setStyleSheet(light_gray_style)   #nel
+                self.limpiarMandibula()
+
+            elif widgets.comboBox.currentText() == 'Mill Power': 
+                widgets.lineEditSizeMayor.setEnabled(True)
+                widgets.lineEditSizeMenor.setEnabled(False) 
+                widgets.lineEditDensidad.setEnabled(False) 
+                widgets.lineEditLmin.setEnabled(True) #y
+                widgets.lineEditFrecuenciaMolienda.setEnabled(False)
+                widgets.lineEditSet.setEnabled(True)  #y
+                widgets.lineEditGape.setEnabled(True) #y
+                widgets.lineEditAlturaTriturador.setEnabled(False) 
+                widgets.lineEditWidth.setEnabled(False) 
+                widgets.lineEditThrow.setEnabled(True) #y
+                widgets.lineEditCapacidadTrituradora.setEnabled(False)
+                widgets.lineEditFrecuenciaCritica.setEnabled(False)
+                widgets.lineEditCapacidadReal.setEnabled(True) #y
+                widgets.lineEditRelacionReduccion.setEnabled(True) #y
+                widgets.lineEditOtroIndiceTrituradora.setEnabled(True) #y
+                widgets.lineEditPotenciaTrituradora.setEnabled(True)  #y
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"
+
+                widgets.lineEditSizeMayor.setStyleSheet(default_style) #y
+                widgets.lineEditSizeMenor.setStyleSheet(light_gray_style)
+                widgets.lineEditDensidad.setStyleSheet(light_gray_style)
+                widgets.lineEditLmin.setStyleSheet(default_style)
+                widgets.lineEditFrecuenciaMolienda.setStyleSheet(light_gray_style)
+                widgets.lineEditSet.setStyleSheet(default_style)
+                widgets.lineEditGape.setStyleSheet(default_style) #y
+                widgets.lineEditAlturaTriturador.setStyleSheet(light_gray_style) 
+                widgets.lineEditWidth.setStyleSheet(light_gray_style)
+                widgets.lineEditThrow.setStyleSheet(default_style)
+                widgets.lineEditCapacidadTrituradora.setStyleSheet(light_gray_style) 
+                widgets.lineEditFrecuenciaCritica.setStyleSheet(light_gray_style) 
+                widgets.lineEditCapacidadReal.setStyleSheet(default_style)
+                widgets.lineEditRelacionReduccion.setStyleSheet(default_style)
+                widgets.lineEditOtroIndiceTrituradora.setStyleSheet(default_style)
+                widgets.lineEditPotenciaTrituradora.setStyleSheet(default_style)
+                self.limpiarMandibula()  
 
         
 

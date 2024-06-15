@@ -41,3 +41,8 @@ from .rodillos import *
 
 from . conos import * 
 
+from . tornillo import * 
+
+from . elevador import * 
+
+from widgets import * 
