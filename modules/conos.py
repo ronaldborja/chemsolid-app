@@ -1,6 +1,5 @@
 #1. Importar los widgets y demás 
-from modules import *
-from widgets import * 
+from widgets import *  
 from main import * 
 from scipy import *
 import numpy as np 
@@ -272,3 +271,149 @@ class Cono(QMainWindow):
 
         for i in lineEdit:
             i.clear()
+
+    def innhabilitar_conos(self): 
+        widgets = self.ui 
+        combox = self.sender()
+        comboName = combox.objectName()
+
+        if comboName == 'comboBox_3':
+            if widgets.comboBox_3.currentText() == 'General': 
+                widgets.lineEditSizeAlimento_2.setEnabled(True)
+                widgets.lineEditSizeProducto_2.setEnabled(True)
+                widgets.lineEditSizeMayor_2.setEnabled(True)
+                widgets.lineEditSetCono.setEnabled(True)
+                widgets.lineEditGape_2.setEnabled(True)
+                widgets.lineEditDiametroBowl.setEnabled(True)
+                widgets.lineEditDensidadAlimento_2.setEnabled(True)
+                widgets.lineEditLminCono.setEnabled(True)
+                widgets.lineEditLmax.setEnabled(True)
+                widgets.lineEditFactorK.setEnabled(True)
+                widgets.lineEditRelacionR.setEnabled(True)
+                widgets.lineEditCapacidadCono.setEnabled(True)
+                widgets.lineEditOtroIndiceCono.setEnabled(True)
+                widgets.lineEditPotenciaCono.setEnabled(True)
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"    
+
+                widgets.lineEditSizeAlimento_2.setStyleSheet(default_style)
+                widgets.lineEditSizeProducto_2.setStyleSheet(default_style)
+                widgets.lineEditSetCono.setStyleSheet(default_style)
+                widgets.lineEditSizeMayor_2.setStyleSheet(default_style)
+                widgets.lineEditGape_2.setStyleSheet(default_style)
+                widgets.lineEditDiametroBowl.setStyleSheet(default_style)
+                widgets.lineEditDensidadAlimento_2.setStyleSheet(default_style)
+                widgets.lineEditLminCono.setStyleSheet(default_style)
+                widgets.lineEditLmax.setStyleSheet(default_style)
+                widgets.lineEditFactorK.setStyleSheet(default_style)
+                widgets.lineEditRelacionR.setStyleSheet(default_style)
+                widgets.lineEditCapacidadCono.setStyleSheet(default_style)
+                widgets.lineEditOtroIndiceCono.setStyleSheet(default_style)
+                widgets.lineEditPotenciaCono.setStyleSheet(default_style)
+                self.limpiarConos()
+
+            elif  widgets.comboBox_3.currentText() == 'Bowl Diameter': 
+                widgets.lineEditSizeAlimento_2.setEnabled(False) 
+                widgets.lineEditSizeProducto_2.setEnabled(False)
+                widgets.lineEditSizeMayor_2.setEnabled(True) #y
+                widgets.lineEditSetCono.setEnabled(True) #y
+                widgets.lineEditGape_2.setEnabled(True) #y
+                widgets.lineEditDiametroBowl.setEnabled(True) #y
+                widgets.lineEditDensidadAlimento_2.setEnabled(False) 
+                widgets.lineEditLminCono.setEnabled(True) #y
+                widgets.lineEditLmax.setEnabled(True)  #y
+                widgets.lineEditFactorK.setEnabled(True) #y
+                widgets.lineEditRelacionR.setEnabled(True) #y
+                widgets.lineEditCapacidadCono.setEnabled(True) #y
+                widgets.lineEditOtroIndiceCono.setEnabled(True) #y
+                widgets.lineEditPotenciaCono.setEnabled(False)
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"  
+
+                widgets.lineEditSizeAlimento_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditSizeProducto_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditSizeMayor_2.setStyleSheet(default_style)  #y
+                widgets.lineEditSetCono.setStyleSheet(default_style)  #y
+                widgets.lineEditGape_2.setStyleSheet(default_style)  #y
+                widgets.lineEditDiametroBowl.setStyleSheet(default_style)  #y
+                widgets.lineEditDensidadAlimento_2.setStyleSheet(light_gray_style)  
+                widgets.lineEditLminCono.setStyleSheet(default_style) #y
+                widgets.lineEditLmax.setStyleSheet(default_style)  #y
+                widgets.lineEditFactorK.setStyleSheet(default_style) #y
+                widgets.lineEditRelacionR.setStyleSheet(default_style) #y
+                widgets.lineEditCapacidadCono.setStyleSheet(default_style) #y
+                widgets.lineEditOtroIndiceCono.setStyleSheet(default_style) #y
+                widgets.lineEditPotenciaCono.setStyleSheet(light_gray_style) 
+                self.limpiarConos()
+
+            elif widgets.comboBox_3.currentText() == 'Mill Capacity ': 
+                widgets.lineEditSizeAlimento_2.setEnabled(False) 
+                widgets.lineEditSizeProducto_2.setEnabled(False)
+                widgets.lineEditSizeMayor_2.setEnabled(True) #y
+                widgets.lineEditSetCono.setEnabled(True) #y
+                widgets.lineEditGape_2.setEnabled(True) #y
+                widgets.lineEditDiametroBowl.setEnabled(True) #y
+                widgets.lineEditDensidadAlimento_2.setEnabled(False) 
+                widgets.lineEditLminCono.setEnabled(True) #y
+                widgets.lineEditLmax.setEnabled(True)  #y
+                widgets.lineEditFactorK.setEnabled(True) #y
+                widgets.lineEditRelacionR.setEnabled(True) #y
+                widgets.lineEditCapacidadCono.setEnabled(True) #y
+                widgets.lineEditOtroIndiceCono.setEnabled(True) #y
+                widgets.lineEditPotenciaCono.setEnabled(False)
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"  
+
+                widgets.lineEditSizeAlimento_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditSizeProducto_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditSizeMayor_2.setStyleSheet(default_style)  #y
+                widgets.lineEditSetCono.setStyleSheet(default_style)  #y
+                widgets.lineEditGape_2.setStyleSheet(default_style)  #y
+                widgets.lineEditDiametroBowl.setStyleSheet(default_style)  #y
+                widgets.lineEditDensidadAlimento_2.setStyleSheet(light_gray_style)  
+                widgets.lineEditLminCono.setStyleSheet(default_style) #y
+                widgets.lineEditLmax.setStyleSheet(default_style)  #y
+                widgets.lineEditFactorK.setStyleSheet(default_style) #y
+                widgets.lineEditRelacionR.setStyleSheet(default_style) #y
+                widgets.lineEditCapacidadCono.setStyleSheet(default_style) #y
+                widgets.lineEditOtroIndiceCono.setStyleSheet(default_style) #y
+                widgets.lineEditPotenciaCono.setStyleSheet(light_gray_style)  
+                self.limpiarConos()
+
+            elif widgets.comboBox_3.currentText() == 'Mill Power': 
+                widgets.lineEditSizeAlimento_2.setEnabled(True) #y
+                widgets.lineEditSizeProducto_2.setEnabled(True) #y
+                widgets.lineEditSizeMayor_2.setEnabled(False) 
+                widgets.lineEditSetCono.setEnabled(False) 
+                widgets.lineEditGape_2.setEnabled(False) 
+                widgets.lineEditDiametroBowl.setEnabled(False)  
+                widgets.lineEditDensidadAlimento_2.setEnabled(False) 
+                widgets.lineEditLminCono.setEnabled(False) 
+                widgets.lineEditLmax.setEnabled(False)  
+                widgets.lineEditFactorK.setEnabled(False) 
+                widgets.lineEditRelacionR.setEnabled(False) 
+                widgets.lineEditCapacidadCono.setEnabled(True) #y
+                widgets.lineEditOtroIndiceCono.setEnabled(True) #y
+                widgets.lineEditPotenciaCono.setEnabled(True) #y
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"  
+
+                widgets.lineEditSizeAlimento_2.setStyleSheet(default_style) #y
+                widgets.lineEditSizeProducto_2.setStyleSheet(default_style) #y
+                widgets.lineEditSizeMayor_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditSetCono.setStyleSheet(light_gray_style) 
+                widgets.lineEditGape_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditDiametroBowl.setStyleSheet(light_gray_style)  
+                widgets.lineEditDensidadAlimento_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditLminCono.setStyleSheet(light_gray_style) 
+                widgets.lineEditLmax.setStyleSheet(light_gray_style) 
+                widgets.lineEditFactorK.setStyleSheet(light_gray_style) 
+                widgets.lineEditRelacionR.setStyleSheet(light_gray_style) 
+                widgets.lineEditCapacidadCono.setStyleSheet(default_style) #y
+                widgets.lineEditOtroIndiceCono.setStyleSheet(default_style) #y
+                widgets.lineEditPotenciaCono.setStyleSheet(default_style)#y
+                self.limpiarConos()

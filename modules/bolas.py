@@ -620,6 +620,274 @@ class Bolas(QMainWindow):
         for i in lineEdit:
             i.clear()
 
-        
+
+    def inhabilitar_bolas(self): 
+        widgets = self.ui 
+        combox = self.sender()
+        comboName = combox.objectName()
+
+        if comboName == 'comboBox_2': 
+            if widgets.comboBox_2.currentText() == 'General': 
+                widgets.lineEditSizeAlimento.setEnabled(True)
+                widgets.lineEditSizeProducto.setEnabled(True)
+                widgets.lineEditDensidadAlimento.setEnabled(True)
+                widgets.lineEditDensidadBolas.setEnabled(True)
+                widgets.lineEditDiametroMolino.setEnabled(True)
+                widgets.lineEditLongitudMolino.setEnabled(True)
+                widgets.lineEditPorosidadLecho.setEnabled(True)
+                widgets.lineEditMasaRocas.setEnabled(True)
+                widgets.lineEditMasaBolas.setEnabled(True)
+                widgets.lineEditNumeroLevantadores.setEnabled(True)
+                widgets.lineEditSizeBolas.setEnabled(True)
+                widgets.lineEditFraccionRocas.setEnabled(True)
+                widgets.lineEditFraccionBolas.setEnabled(True)
+                widgets.lineEditConstanteMolino.setEnabled(True)
+                widgets.lineEditFrecuenciaMolienda_2.setEnabled(True)
+                widgets.lineEditFrecuenciaCritica_2.setEnabled(True)
+                widgets.lineEditFraccionFrecuenciaC.setEnabled(True)
+                widgets.lineEditIndiceAbrasion.setEnabled(True)
+                widgets.lineEditIndiceBond.setEnabled(True)
+                widgets.lineEditFactorCorrecionCapacidad.setEnabled(True)
+                widgets.lineEditDesgasteBolas.setEnabled(True)
+                widgets.lineEditCapacidadMolino.setEnabled(True)
+                widgets.lineEditPotenciaMolino.setEnabled(True)
+
+                default_style = "QLineEdit { }"
+                widgets.lineEditSizeAlimento.setStyleSheet(default_style)
+                widgets.lineEditSizeProducto.setStyleSheet(default_style)
+                widgets.lineEditDensidadAlimento.setStyleSheet(default_style)
+                widgets.lineEditDensidadBolas.setStyleSheet(default_style)
+                widgets.lineEditDiametroMolino.setStyleSheet(default_style)
+                widgets.lineEditLongitudMolino.setStyleSheet(default_style)
+                widgets.lineEditPorosidadLecho.setStyleSheet(default_style)
+                widgets.lineEditMasaRocas.setStyleSheet(default_style)
+                widgets.lineEditMasaBolas.setStyleSheet(default_style)
+                widgets.lineEditNumeroLevantadores.setStyleSheet(default_style)
+                widgets.lineEditSizeBolas.setStyleSheet(default_style)
+                widgets.lineEditFraccionRocas.setStyleSheet(default_style)
+                widgets.lineEditFraccionBolas.setStyleSheet(default_style)
+                widgets.lineEditConstanteMolino.setStyleSheet(default_style)
+                widgets.lineEditFrecuenciaMolienda_2.setStyleSheet(default_style)
+                widgets.lineEditFrecuenciaCritica_2.setStyleSheet(default_style)
+                widgets.lineEditFraccionFrecuenciaC.setStyleSheet(default_style)
+                widgets.lineEditIndiceAbrasion.setStyleSheet(default_style)
+                widgets.lineEditIndiceBond.setStyleSheet(default_style)
+                widgets.lineEditFactorCorrecionCapacidad.setStyleSheet(default_style)
+                widgets.lineEditDesgasteBolas.setStyleSheet(default_style)
+                widgets.lineEditCapacidadMolino.setStyleSheet(default_style)
+                widgets.lineEditPotenciaMolino.setStyleSheet(default_style)
+                self.limpiarBolas()
+
+            elif widgets.comboBox_2.currentText() == 'Ball and Mill Diameter': 
+                widgets.lineEditSizeAlimento.setEnabled(True) #y
+                widgets.lineEditSizeProducto.setEnabled(False) 
+                widgets.lineEditDensidadAlimento.setEnabled(True) #y
+                widgets.lineEditDensidadBolas.setEnabled(False)  
+                widgets.lineEditDiametroMolino.setEnabled(True) #y
+                widgets.lineEditLongitudMolino.setEnabled(False) 
+                widgets.lineEditPorosidadLecho.setEnabled(False) 
+                widgets.lineEditMasaRocas.setEnabled(False) 
+                widgets.lineEditMasaBolas.setEnabled(False) 
+                widgets.lineEditNumeroLevantadores.setEnabled(False)
+                widgets.lineEditSizeBolas.setEnabled(True) # y
+                widgets.lineEditFraccionRocas.setEnabled(False) 
+                widgets.lineEditFraccionBolas.setEnabled(False)
+                widgets.lineEditConstanteMolino.setEnabled(True) #y
+                widgets.lineEditFrecuenciaMolienda_2.setEnabled(True) #y
+                widgets.lineEditFrecuenciaCritica_2.setEnabled(True) #y
+                widgets.lineEditFraccionFrecuenciaC.setEnabled(True) #y
+                widgets.lineEditIndiceAbrasion.setEnabled(False)
+                widgets.lineEditIndiceBond.setEnabled(True) #y
+                widgets.lineEditFactorCorrecionCapacidad.setEnabled(False)
+                widgets.lineEditDesgasteBolas.setEnabled(False)
+                widgets.lineEditCapacidadMolino.setEnabled(False)
+                widgets.lineEditPotenciaMolino.setEnabled(False)
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"
+
+                widgets.lineEditSizeAlimento.setStyleSheet(default_style) #y
+                widgets.lineEditSizeProducto.setStyleSheet(light_gray_style) 
+                widgets.lineEditDensidadAlimento.setStyleSheet(default_style) #y
+                widgets.lineEditDensidadBolas.setStyleSheet(light_gray_style) 
+                widgets.lineEditDiametroMolino.setStyleSheet(default_style) #y
+                widgets.lineEditLongitudMolino.setStyleSheet(light_gray_style)  
+                widgets.lineEditPorosidadLecho.setStyleSheet(light_gray_style) 
+                widgets.lineEditMasaRocas.setStyleSheet(light_gray_style) 
+                widgets.lineEditMasaBolas.setStyleSheet(light_gray_style) 
+                widgets.lineEditNumeroLevantadores.setStyleSheet(light_gray_style) 
+                widgets.lineEditSizeBolas.setStyleSheet(default_style) #y
+                widgets.lineEditFraccionRocas.setStyleSheet(light_gray_style) 
+                widgets.lineEditFraccionBolas.setStyleSheet(light_gray_style) 
+                widgets.lineEditConstanteMolino.setStyleSheet(default_style) #y
+                widgets.lineEditFrecuenciaMolienda_2.setStyleSheet(default_style) #y
+                widgets.lineEditFrecuenciaCritica_2.setStyleSheet(default_style) #y
+                widgets.lineEditFraccionFrecuenciaC.setStyleSheet(default_style) #y
+                widgets.lineEditIndiceAbrasion.setStyleSheet(light_gray_style) 
+                widgets.lineEditIndiceBond.setStyleSheet(default_style) #y
+                widgets.lineEditFactorCorrecionCapacidad.setStyleSheet(light_gray_style) #y
+                widgets.lineEditDesgasteBolas.setStyleSheet(light_gray_style) #y
+                widgets.lineEditCapacidadMolino.setStyleSheet(light_gray_style) #y
+                widgets.lineEditPotenciaMolino.setStyleSheet(light_gray_style) #y
+                self.limpiarBolas()
+
+            elif widgets.comboBox_2.currentText() == 'Ball Wearing': 
+                widgets.lineEditSizeAlimento.setEnabled(False) 
+                widgets.lineEditSizeProducto.setEnabled(False) 
+                widgets.lineEditDensidadAlimento.setEnabled(False) 
+                widgets.lineEditDensidadBolas.setEnabled(False)  
+                widgets.lineEditDiametroMolino.setEnabled(False) 
+                widgets.lineEditLongitudMolino.setEnabled(False) 
+                widgets.lineEditPorosidadLecho.setEnabled(False) 
+                widgets.lineEditMasaRocas.setEnabled(False) 
+                widgets.lineEditMasaBolas.setEnabled(False) 
+                widgets.lineEditNumeroLevantadores.setEnabled(False)
+                widgets.lineEditSizeBolas.setEnabled(False) 
+                widgets.lineEditFraccionRocas.setEnabled(False) 
+                widgets.lineEditFraccionBolas.setEnabled(False)
+                widgets.lineEditConstanteMolino.setEnabled(False) 
+                widgets.lineEditFrecuenciaMolienda_2.setEnabled(False) 
+                widgets.lineEditFrecuenciaCritica_2.setEnabled(False) 
+                widgets.lineEditFraccionFrecuenciaC.setEnabled(False) 
+                widgets.lineEditIndiceAbrasion.setEnabled(True) #y
+                widgets.lineEditIndiceBond.setEnabled(False) 
+                widgets.lineEditFactorCorrecionCapacidad.setEnabled(False)
+                widgets.lineEditDesgasteBolas.setEnabled(True) #y
+                widgets.lineEditCapacidadMolino.setEnabled(False)
+                widgets.lineEditPotenciaMolino.setEnabled(False)
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"
+
+                widgets.lineEditSizeAlimento.setStyleSheet(light_gray_style) 
+                widgets.lineEditSizeProducto.setStyleSheet(light_gray_style) 
+                widgets.lineEditDensidadAlimento.setStyleSheet(light_gray_style) 
+                widgets.lineEditDensidadBolas.setStyleSheet(light_gray_style)   
+                widgets.lineEditDiametroMolino.setStyleSheet(light_gray_style) 
+                widgets.lineEditLongitudMolino.setStyleSheet(light_gray_style) 
+                widgets.lineEditPorosidadLecho.setStyleSheet(light_gray_style) 
+                widgets.lineEditMasaRocas.setStyleSheet(light_gray_style) 
+                widgets.lineEditMasaBolas.setStyleSheet(light_gray_style) 
+                widgets.lineEditNumeroLevantadores.setStyleSheet(light_gray_style) 
+                widgets.lineEditSizeBolas.setStyleSheet(light_gray_style) 
+                widgets.lineEditFraccionRocas.setStyleSheet(light_gray_style) 
+                widgets.lineEditFraccionBolas.setStyleSheet(light_gray_style) 
+                widgets.lineEditConstanteMolino.setStyleSheet(light_gray_style) 
+                widgets.lineEditFrecuenciaMolienda_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditFrecuenciaCritica_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditFraccionFrecuenciaC.setStyleSheet(light_gray_style) 
+                widgets.lineEditIndiceAbrasion.setStyleSheet(default_style) 
+                widgets.lineEditIndiceBond.setStyleSheet(light_gray_style) 
+                widgets.lineEditFactorCorrecionCapacidad.setStyleSheet(light_gray_style) 
+                widgets.lineEditDesgasteBolas.setStyleSheet(default_style) 
+                widgets.lineEditCapacidadMolino.setStyleSheet(light_gray_style) 
+                widgets.lineEditPotenciaMolino.setStyleSheet(light_gray_style) 
+                self.limpiarBolas()
+
+            elif widgets.comboBox_2.currentText() == 'Mill Power': 
+                widgets.lineEditSizeAlimento.setEnabled(True) #y
+                widgets.lineEditSizeProducto.setEnabled(True) #y
+                widgets.lineEditDensidadAlimento.setEnabled(False)  
+                widgets.lineEditDensidadBolas.setEnabled(False)    
+                widgets.lineEditDiametroMolino.setEnabled(False) 
+                widgets.lineEditLongitudMolino.setEnabled(False) 
+                widgets.lineEditPorosidadLecho.setEnabled(False) 
+                widgets.lineEditMasaRocas.setEnabled(False) 
+                widgets.lineEditMasaBolas.setEnabled(False) 
+                widgets.lineEditNumeroLevantadores.setEnabled(False)
+                widgets.lineEditSizeBolas.setEnabled(False) 
+                widgets.lineEditFraccionRocas.setEnabled(False) 
+                widgets.lineEditFraccionBolas.setEnabled(False)
+                widgets.lineEditConstanteMolino.setEnabled(False) 
+                widgets.lineEditFrecuenciaMolienda_2.setEnabled(False) 
+                widgets.lineEditFrecuenciaCritica_2.setEnabled(False) 
+                widgets.lineEditFraccionFrecuenciaC.setEnabled(False) 
+                widgets.lineEditIndiceAbrasion.setEnabled(False) 
+                widgets.lineEditIndiceBond.setEnabled(True) #y
+                widgets.lineEditFactorCorrecionCapacidad.setEnabled(False)
+                widgets.lineEditDesgasteBolas.setEnabled(False) 
+                widgets.lineEditCapacidadMolino.setEnabled(True) #y
+                widgets.lineEditPotenciaMolino.setEnabled(True)
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"
+
+                widgets.lineEditSizeAlimento.setStyleSheet(default_style)  #y
+                widgets.lineEditSizeProducto.setStyleSheet(default_style) #y
+                widgets.lineEditDensidadAlimento.setStyleSheet(light_gray_style)   
+                widgets.lineEditDensidadBolas.setStyleSheet(light_gray_style)   
+                widgets.lineEditDiametroMolino.setStyleSheet(light_gray_style)  
+                widgets.lineEditLongitudMolino.setStyleSheet(light_gray_style)  
+                widgets.lineEditPorosidadLecho.setStyleSheet(light_gray_style) 
+                widgets.lineEditMasaRocas.setStyleSheet(light_gray_style)  
+                widgets.lineEditMasaBolas.setStyleSheet(light_gray_style)  
+                widgets.lineEditNumeroLevantadores.setStyleSheet(light_gray_style) 
+                widgets.lineEditSizeBolas.setStyleSheet(light_gray_style) 
+                widgets.lineEditFraccionRocas.setStyleSheet(light_gray_style)  
+                widgets.lineEditFraccionBolas.setStyleSheet(light_gray_style) 
+                widgets.lineEditConstanteMolino.setStyleSheet(light_gray_style)  
+                widgets.lineEditFrecuenciaMolienda_2.setStyleSheet(light_gray_style)  
+                widgets.lineEditFrecuenciaCritica_2.setStyleSheet(light_gray_style) 
+                widgets.lineEditFraccionFrecuenciaC.setStyleSheet(light_gray_style) 
+                widgets.lineEditIndiceAbrasion.setStyleSheet(light_gray_style) 
+                widgets.lineEditIndiceBond.setStyleSheet(default_style) 
+                widgets.lineEditFactorCorrecionCapacidad.setStyleSheet(light_gray_style) 
+                widgets.lineEditDesgasteBolas.setStyleSheet(light_gray_style) 
+                widgets.lineEditCapacidadMolino.setStyleSheet(default_style) 
+                widgets.lineEditPotenciaMolino.setStyleSheet(default_style) 
+                self.limpiarBolas()
+
+            elif widgets.comboBox_2.currentText() == 'Mill Capacity': 
+                widgets.lineEditSizeAlimento.setEnabled(True) #y
+                widgets.lineEditSizeProducto.setEnabled(True) #y
+                widgets.lineEditDensidadAlimento.setEnabled(False)  
+                widgets.lineEditDensidadBolas.setEnabled(True) #y 
+                widgets.lineEditDiametroMolino.setEnabled(True) #y
+                widgets.lineEditLongitudMolino.setEnabled(True) #y
+                widgets.lineEditPorosidadLecho.setEnabled(True) #y
+                widgets.lineEditMasaRocas.setEnabled(False)
+                widgets.lineEditMasaBolas.setEnabled(True) #y
+                widgets.lineEditNumeroLevantadores.setEnabled(False)
+                widgets.lineEditSizeBolas.setEnabled(False) 
+                widgets.lineEditFraccionRocas.setEnabled(False) 
+                widgets.lineEditFraccionBolas.setEnabled(True) #y
+                widgets.lineEditConstanteMolino.setEnabled(False) 
+                widgets.lineEditFrecuenciaMolienda_2.setEnabled(True) #y 
+                widgets.lineEditFrecuenciaCritica_2.setEnabled(True)  #y
+                widgets.lineEditFraccionFrecuenciaC.setEnabled(True) #y
+                widgets.lineEditIndiceAbrasion.setEnabled(False) 
+                widgets.lineEditIndiceBond.setEnabled(True) #y
+                widgets.lineEditFactorCorrecionCapacidad.setEnabled(True) #y
+                widgets.lineEditDesgasteBolas.setEnabled(False) 
+                widgets.lineEditCapacidadMolino.setEnabled(True) #y
+                widgets.lineEditPotenciaMolino.setEnabled(False)
+
+                default_style = "QLineEdit { }"
+                light_gray_style = "background-color: lightgray;"
+
+                widgets.lineEditSizeAlimento.setStyleSheet(default_style) #y
+                widgets.lineEditSizeProducto.setStyleSheet(default_style) #y
+                widgets.lineEditDensidadAlimento.setStyleSheet(light_gray_style)
+                widgets.lineEditDensidadBolas.setStyleSheet(default_style) #y 
+                widgets.lineEditDiametroMolino.setStyleSheet(default_style) #y
+                widgets.lineEditLongitudMolino.setStyleSheet(default_style) #y
+                widgets.lineEditPorosidadLecho.setStyleSheet(default_style) #y
+                widgets.lineEditMasaRocas.setStyleSheet(light_gray_style)
+                widgets.lineEditMasaBolas.setStyleSheet(default_style) #y
+                widgets.lineEditNumeroLevantadores.setStyleSheet(light_gray_style)
+                widgets.lineEditSizeBolas.setStyleSheet(light_gray_style)
+                widgets.lineEditFraccionRocas.setStyleSheet(light_gray_style)
+                widgets.lineEditFraccionBolas.setStyleSheet(default_style) #y
+                widgets.lineEditConstanteMolino.setStyleSheet(light_gray_style) 
+                widgets.lineEditFrecuenciaMolienda_2.setStyleSheet(default_style) #y 
+                widgets.lineEditFrecuenciaCritica_2.setStyleSheet(default_style) #y
+                widgets.lineEditFraccionFrecuenciaC.setStyleSheet(default_style) #y
+                widgets.lineEditIndiceAbrasion.setStyleSheet(light_gray_style)
+                widgets.lineEditIndiceBond.setStyleSheet(default_style) #y
+                widgets.lineEditFactorCorrecionCapacidad.setStyleSheet(default_style) #y
+                widgets.lineEditDesgasteBolas.setStyleSheet(light_gray_style)
+                widgets.lineEditCapacidadMolino.setStyleSheet(default_style) #y
+                widgets.lineEditPotenciaMolino.setStyleSheet(light_gray_style)
+                self.limpiarBolas()
 
             
