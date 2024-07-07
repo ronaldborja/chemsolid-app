@@ -2,7 +2,8 @@
 ## Desktop Application to Size Screen, Mills, Screws, Bucket Elevators & Conveyor Belts. 
 
 Authors: Kaleth Padillla and Ronald Borja <br>
-Tutors: Jorge Piñeres and Luis Obregon
+Tutors: Jorge Piñeres and Luis Obregón
+Universidad del Atlántico, Colombia.
 
 In this project, we developed a desktop application programmed in Python using the QtDesinger library for the sizing of screens, mills, screws, bucket elevators and conveyor belts. The main objectives of this project were:
 
