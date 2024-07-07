@@ -1,6 +1,9 @@
 # ChemSolid
 ## Desktop Application to Size Screen, Mills, Screws, Bucket Elevators & Conveyor Belts. 
 
+Authors: Kaleth Padillla and Ronald Borja 
+Tutors: Jorge Piñeres and Luis Obregon
+
 In this project, we developed a desktop application programmed in Python using the QtDesinger library for the sizing of screens, mills, screws, bucket elevators and conveyor belts. The main objectives of this project were:
 
 * Develop a computational package in Python as a support tool in the teaching process in the Solids Management subject of the Chemical Engineering program at the Universidad del Atlántico.
